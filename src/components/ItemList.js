@@ -4,8 +4,8 @@ import { addItems } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
     const dispatch = useDispatch()
-    const handleAddItem = () => {
-        dispatch(addItems("pizza"));
+    const handleAddItem = (item) => {
+        dispatch(addItems(item));
     }
 
     console.log(items);
@@ -29,7 +29,7 @@ const ItemList = ({ items }) => {
                         {(item.card.info.imageId) ? <img src={CDN_URL + item.card.info.imageId} /> : <div></div>}
                         <button
                             className="my-2 p-2 font-bold bg-white shadow-lg w-full border border-black cursor-pointer"
-                            onClick={handleAddItem}
+                            onClick={() => handleAddItem(item)}
                         >
                             Add +
                         </button>

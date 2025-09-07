@@ -11,6 +11,7 @@ import Menu from "./components/Menu";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 const AppLayout = () => {
     //some code to fetch values to be used for global context
@@ -50,6 +51,9 @@ const appRouter = createBrowserRouter([
             {
                 path: "/restaurant/:id",
                 element: <Menu />
+            }, {
+                path: "/cart",
+                element: <Cart />
             }
         ],
         errorElement: <Error />,

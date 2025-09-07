@@ -30,7 +30,9 @@ const Header = () => {
                         <Link to="/contact">Contact Us</Link>
                     </li>
                     <li className="px-4">
-                        🛒 - ({cart.length})
+                        <Link to="/cart">
+                            🛒 - ({cart.length})
+                        </Link>
                     </li>
                     <li>
                         <button
