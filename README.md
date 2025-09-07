@@ -1,0 +1,9 @@
+- Redux
+  - Installation
+    - Redux Toolkit
+    - React Redux
+  - Build Our Store
+  - Connect store to App
+  - Create Slices
+  - Dispatch Action
+  - Read Data Using Selector
