@@ -15,5 +15,4 @@ const Shimmer = () => {
         </div>
     )
 }
-
 export default Shimmer;

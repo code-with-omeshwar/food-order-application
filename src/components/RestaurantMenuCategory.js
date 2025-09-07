@@ -16,5 +16,4 @@ const RestaurantMenuCategory = ({ data, showItems, setShowIndex }) => {
         </div>
     )
 }
-
 export default RestaurantMenuCategory;

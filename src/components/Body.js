@@ -13,19 +13,15 @@ const Body = () => {
     const filteredRestaurants = listOfRestaurants;
     const RestaurantPromotedComponent = withPromotedLabel();
     const { userName, setName } = useContext(UserContext);
-
-
     const onlineStatus = useOnlineStatus();
     if (onlineStatus === false) {
         return (
             <h1>Looks like you are offline</h1>
         )
     }
-
     if (listOfRestaurants.length === 0) {
         return <Shimmer />
     }
-
     return (
         <div className="body">
             <div className="filter flex items-center">
@@ -76,5 +72,4 @@ const Body = () => {
         </div >
     )
 }
-
 export default Body;

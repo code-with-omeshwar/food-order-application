@@ -1,9 +1,7 @@
 import { CDN_URL } from "../utils/constant";
 
 const RestaurantCard = ({ restaurant }) => {
-
     const { name, cloudinaryImageId: image, cuisines, avgRating: rating, costForTwo, sla: { slaString: deliveryTime } } = restaurant?.info;
-
     return (
         <div className="p-4 m-4 w-[250px] bg-gray-100 hover:bg-gray-200">
             <img className="res-logo" src={CDN_URL + image} alt="image" />
@@ -28,5 +26,4 @@ export const withPromotedLabel = () => {
         );
     };
 };
-
 export default RestaurantCard;

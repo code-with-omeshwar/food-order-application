@@ -21,7 +21,6 @@ class User extends React.Component {
     render() {
         const { name, location, avatar_url } = this.state.userInfo;
         console.log(this.state.userInfo);
-
         return (
             <div className="user-card">
                 <h2>Name: {name}</h2>
@@ -38,5 +37,4 @@ class User extends React.Component {
         )
     }
 }
-
 export default User;

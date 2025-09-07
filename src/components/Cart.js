@@ -21,9 +21,7 @@ const Cart = () => {
                     </button>
                 </div>
             )}
-
         </div>
     )
 }
-
 export default Cart;

@@ -21,7 +21,6 @@ const Menu = () => {
     // console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     // console.log(nestedItemCategory);
 
-
     if (!menuData) {
         return <Shimmer />;
     }
@@ -44,5 +43,4 @@ const Menu = () => {
         </div>
     )
 }
-
 export default Menu;

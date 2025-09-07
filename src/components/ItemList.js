@@ -7,7 +7,6 @@ const ItemList = ({ items }) => {
     const handleAddItem = (item) => {
         dispatch(addItems(item));
     }
-
     console.log(items);
     return (
         <div>
@@ -39,5 +38,4 @@ const ItemList = ({ items }) => {
         </div>
     )
 }
-
 export default ItemList;
