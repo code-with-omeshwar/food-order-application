@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import resObject from "../utils/mockData";
 import Shimmer from "./Shimmer";
@@ -10,10 +10,13 @@ import UserContext from "../utils/UserContext";
 const Body = () => {
     const [searchText, setSearchText] = useState("");
     const listOfRestaurants = useRestaurantBody();
-    const filteredRestaurants = listOfRestaurants;
+    const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const RestaurantPromotedComponent = withPromotedLabel();
     const { userName, setName } = useContext(UserContext);
     const onlineStatus = useOnlineStatus();
+    useEffect(() => {
+        setFilteredRestaurants(listOfRestaurants);
+    }, [listOfRestaurants]);
     if (onlineStatus === false) {
         return (
             <h1>Looks like you are offline</h1>
@@ -47,7 +50,7 @@ const Body = () => {
                     <button className="px-4 py-1 bg-gray-100 m-4 rounded-lg"
                         onClick={() => {
                             const newRestaurants = resObject.filter((restaurant) => restaurant.info.avgRating > 4.2);
-                            setListOfRestaurants(newRestaurants);
+                            setFilteredRestaurants(newRestaurants);
                         }}>
                         Top Rated Restaurants
                     </button>
