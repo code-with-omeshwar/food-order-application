@@ -31,12 +31,12 @@ const Header = () => {
                     </li>
                     <li className="px-4">
                         <Link to="/cart">
-                            🛒 - ({cart.length})
+                            Cart - ({cart.length})
                         </Link>
                     </li>
                     <li>
                         <button
-                            className="login-btn"
+                            className="cursor-pointer"
                             onClick={() => {
                                 buttonStatus === "Login" ? setButtonStatus("Logout") : setButtonStatus("Login");
                             }} >
